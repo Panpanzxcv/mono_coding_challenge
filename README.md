@@ -1,17 +1,38 @@
-# mono_coding_challenge
-Coding challenge of full stack position of MONO studio
+# Wedding Database Management
+This project manages wedding-related data using a SQLite database. It allows for the insertion of user and wedding data from CSV files and provides functionality to query users based on specific wedding dates.
 
-# Requirement
-Use Python or JavaScript to print:
-- the user name of all the weddings that take place in 2024 june
-- the user name of all the wedding will happen in 2 weeks
+## Features
+- **SQLite Database**: Create and manage a local SQLite database (weddings.db).
+- **Data Ingestion**: Read user and wedding data from CSV files (Users_Data.csv and Weddings_Data.csv) and populate the database.
+- **Data Queries**:
+    
+    Retrieve users with weddings scheduled for June 
+    2024.
+    Retrieve users with weddings scheduled in the next two weeks.
+- **Results Export**: Save the query results to a text file (wedding_results.txt).
 
 
-All the information is provided in the CSV attached. you can fork this repo to start the challenge.
+## Prerequisites
+- Python 3.8
+- SQLite3
+- CSV files (Users_Data.csv, Weddings_Data.csv) with the following structure:
+
+    - Users_Data.csv:
+        
+        user_id, user_name
+    
+    - Weddings_Data.csv:
+        
+        user_id, wedding_date
 
 
-## Your need to follow these rules:
-- use a DB (pandas or similar package is not accepted)
-- save the output in the file
-- your code should be testable on any platform (windows/linux/macos)
-- commit message/ readme/ unit test is also part of the test.
+## Usage
+1. Ensure the required CSV files are in the same directory as the script.
+2. Run the script:
+    
+        python wedding_database.py
+
+3. The results will be saved in wedding_results.txt.
+
+
+
